@@ -1,0 +1,3984 @@
+
+bb_init()
+    conn:
+    proto_major = 7
+    proto_minor = 26
+    async_read = 1
+    max_write = 131072
+    max_readahead = 131072
+    capable = 00000ffb
+    want = 00000010
+    max_background = 0
+    congestion_threshold = 0
+    context:
+    fuse = 0218e510
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = 0218d010
+    logfile = 0218e040
+    rootdir = /home/udit01/afas/Fuse-Tutorial/example/rootdir
+    umask = 00000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/.xdg-volume-info", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.xdg-volume-info", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.xdg-volume-info"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_access(path="/", mask=04)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+
+bb_getattr(path="/autorun.inf", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/autorun.inf", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/autorun.inf"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/.Trash", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.Trash", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.Trash"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/.Trash-1000", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.Trash-1000", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.Trash-1000"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000b20
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xc4000990, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07c4000b50
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000b20
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xc4000990, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07c4000b50
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000b20
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xc4000990, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07c4000b50
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000b20
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xc4000990, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07c4000b50
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000b20
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xc4000990, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07c4000b50
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000b20
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xc4000990, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07c4000b50
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000b20
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xc4000990, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07c4000b50
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000b20
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+    opendir returned 0x0x7f07cc00a1f0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc00a1f0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b80, filler=0xd128dce0, offset=0, fi=0xcbffec80)
+    readdir returned 0x0x7f07cc00a220
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc00a1f0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc00a1f0
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    flags = 0x00000000
+    fh_old = 0x7f07cc00a1f0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc00a1f0
+    lock_owner = 0x0000000000000000
+    opendir returned 0x0x7f07cc001d10
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001d10
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xcbffec80)
+    readdir returned 0x0x7f07cc001d40
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001d10
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001d10
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001d10
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001d10
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001d10
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001d10
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b80, filler=0xd128dce0, offset=0, fi=0xcbffec80)
+    readdir returned 0x0x7f07cc001d40
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001d10
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001d10
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001d10
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001d10
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001d10
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001d10
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xcbffec80)
+    readdir returned 0x0x7f07cc001d40
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001d10
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001d10
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001d10
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001d10
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001d10
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001d10
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b80, filler=0xd128dce0, offset=0, fi=0xcbffec80)
+    readdir returned 0x0x7f07cc001d40
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001d10
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001d10
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001d10
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    writepage = 0
+    direct_io = 0
+    opendir returned 0x0x7f07cc009d50
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc009d50
+    lock_owner = 0x0000000000000000
+    keep_cache = 0
+    fh = 0x00007f07cc001d10
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07cc009d80
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc009d50
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc009d50
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc009d50
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc009d50
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000cd0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xc4000b40, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07c4000d00
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/autorun.inf", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/autorun.inf", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/autorun.inf"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xcb7fdc80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/.gitignore", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.gitignore", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.gitignore"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getxattr(path = "/", name = "security.selinux", value = 0xcc001b80, size = 255)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xcb7fdc80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0xcc001b80, size = 255)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000cd0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xc4000b40, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07c4000d00
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/.gitignore", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.gitignore", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.gitignore"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+
+bb_getattr(path="/powerline-shell.json", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/powerline-shell.json", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/powerline-shell.json"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/HEAD", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/HEAD", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/HEAD"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_opendir(path="/", fi=0xcb7fdc80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07bc000b20
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07bc000b20
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xbc000990, filler=0xd128dce0, offset=0, fi=0xcbffec80)
+    readdir returned 0x0x7f07bc000b50
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07bc000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07bc000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07bc000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07bc000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/powerline-shell.json", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/powerline-shell.json", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/powerline-shell.json"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/HEAD", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/HEAD", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/HEAD"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000cd0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xc4000b40, filler=0xd128dce0, offset=0, fi=0xcb7fdc80)
+    readdir returned 0x0x7f07c4000d00
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_releasedir(path="/", fi=0xcb7fdc90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/powerline-shell.json", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/powerline-shell.json", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/powerline-shell.json"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/HEAD", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/HEAD", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/HEAD"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_opendir(path="/", fi=0xcb7fdc80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07bc000b20
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07bc000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xbc000990, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07bc000b50
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07bc000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07bc000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0xc4000b40, size = 255)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getxattr(path = "/", name = "security.selinux", value = 0xc4000b40, size = 255)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07bc000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07bc000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/powerline-shell.json", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/powerline-shell.json", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/powerline-shell.json"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/HEAD", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/HEAD", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/HEAD"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_opendir(path="/", fi=0xcb7fdc80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07bc000b20
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07bc000b20
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xbc000990, filler=0xd128dce0, offset=0, fi=0xcbffec80)
+    readdir returned 0x0x7f07bc000b50
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07bc000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07bc000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/.gitignore", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.gitignore", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.gitignore"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07bc000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07bc000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000cd0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xc4000b40, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07c4000d00
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/.gitignore", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.gitignore", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.gitignore"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000cd0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xc4000b40, filler=0xd128dce0, offset=0, fi=0xcb7fdc80)
+    readdir returned 0x0x7f07c4000d00
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/.gitignore", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.gitignore", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.gitignore"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_releasedir(path="/", fi=0xcb7fdc90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xcb7fdc80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/.gitignore", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.gitignore", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.gitignore"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000cd0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xc4000b40, filler=0xd128dce0, offset=0, fi=0xcb7fdc80)
+    readdir returned 0x0x7f07c4000d00
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/.gitignore", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.gitignore", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.gitignore"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_releasedir(path="/", fi=0xcb7fdc90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+
+bb_getattr(path="/powerline-shell.json", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/powerline-shell.json", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/powerline-shell.json"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/HEAD", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/HEAD", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/HEAD"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xcbffec80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/powerline-shell.json", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/powerline-shell.json", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/powerline-shell.json"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/HEAD", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/HEAD", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/HEAD"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000cd0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xc4000b40, filler=0xd128dce0, offset=0, fi=0xcb7fdc80)
+    readdir returned 0x0x7f07c4000d00
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0xcc001b00, size = 255)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getxattr(path = "/", name = "security.selinux", value = 0xcc001b00, size = 255)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_access", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/", name = "system.posix_acl_default", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_releasedir(path="/", fi=0xcb7fdc90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/powerline-shell.json", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/powerline-shell.json", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/powerline-shell.json"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/HEAD", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/HEAD", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/HEAD"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_opendir(path="/", fi=0xcb7fdc80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07bc000b20
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07bc000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xbc000990, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07bc000b50
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07bc000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07bc000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07bc000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07bc000b20
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/powerline-shell.json", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/powerline-shell.json", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/powerline-shell.json"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/HEAD", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/HEAD", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/HEAD"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xcbffec80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getxattr(path = "/bogus.txt", name = "security.selinux", value = 0xbc000990, size = 255)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_getxattr(path = "/bogus.txt", name = "system.posix_acl_access", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_releasedir(path="/", fi=0xcb7fdc90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/powerline-shell.json", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/powerline-shell.json", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/powerline-shell.json"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.git", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.git", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.git"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/HEAD", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/HEAD", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/HEAD"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000cd0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xc4000b40, filler=0xd128dce0, offset=0, fi=0xd0a99c80)
+    readdir returned 0x0x7f07c4000d00
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/.gitignore", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.gitignore", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.gitignore"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_releasedir(path="/", fi=0xd0a99c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_opendir(path="/", fi=0xcbffec80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07c4000cd0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xc4000b40, filler=0xd128dce0, offset=0, fi=0xcb7fdc80)
+    readdir returned 0x0x7f07c4000d00
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xcbffec90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/.gitignore", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.gitignore", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.gitignore"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_releasedir(path="/", fi=0xcb7fdc90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07c4000cd0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07c4000cd0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcbffec60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_opendir(path="/", fi=0xd0a99c80)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    opendir returned 0x0x7f07cc001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xcb7fdc60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_readdir(path="/", buf=0xcc001b00, filler=0xd128dce0, offset=0, fi=0xcbffec80)
+    readdir returned 0x0x7f07cc001cc0
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name .
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0xd0a99c90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/bogus.txt", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3758221
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_getattr(path="/.gitignore", statbuf=0xcb7fdc90)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/.gitignore", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/.gitignore"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_releasedir(path="/", fi=0xcbffec90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f07cc001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f07cc001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xd0a99c60)
+    bb_fullpath:  rootdir = "/home/udit01/afas/Fuse-Tutorial/example/rootdir", path = "/", fpath = "/home/udit01/afas/Fuse-Tutorial/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2054
+    st_ino = 3760940
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5b9c44db
+    st_mtime = 0x5b9c44db
+    st_ctime = 0x5b9c44db
+
+bb_destroy(userdata=0x0218d010)
