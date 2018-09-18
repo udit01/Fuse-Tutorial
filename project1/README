@@ -1,0 +1,19 @@
+CSE 121 Project 1: A Simple File System
+
+You should use the 'make' command to build your filesystem executable
+and the formatting program.  We have provided skeleton code in
+cse121fs.c and cse121mkfs.c to get you started.  You will need to fill
+in the stub code as specified by the assignment.
+
+Note that you can pass in the '-d' flag to your FUSE executable to
+produce debugging output that will help you understand what's going on.
+If you do so, however, your program will NOT go into daemon mode, so you
+will need to use another terminal to exercise the directory.  Your
+executable will exit when you unmount the file system.
+
+You will find a great deal of resources about FUSE on the Web.  Please
+use the webboard to ask questions if you're stuck.
+
+Good luck!
+
+- Alex
