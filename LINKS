@@ -1,3 +1,20 @@
+Infrence of phy and logical addressing throught Ware-levelling article : https://en.wikipedia.org/wiki/Wear_leveling
+
+
+LOGICAL ADDR:
+https://serverfault.com/questions/309641/how-can-i-find-out-where-a-file-is-physically-located-on-the-disk-block-numbers
+http://kernel.ubuntu.com/git/cking/debug-code/.git/tree/block-mapper-fibmap/fibmap.c
+https://stackoverflow.com/questions/6403795/how-can-i-find-the-physical-address-of-a-file
+
+http://codewiki.wikidot.com/c:struct-stat
+https://lists.debian.org/debian-mips/2002/04/msg00059.html
+
+LIBFUSE API DOCS : 
+http://libfuse.github.io/doxygen/index.html
+http://libfuse.github.io/doxygen/fast17-vangoor.pdf
+https://github.com/libfuse/libfuse/wiki
+
+
 LIBFUSE:
 https://github.com/libfuse/libfuse
 https://www.ibm.com/developerworks/linux/library/l-fuse/
