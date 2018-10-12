@@ -1,0 +1,20 @@
+Lab 8. CS333. Autumn 2017
+--------------------------
+
+1. lab8.pdf describes the lab statement.
+
+3. The directory 'test-program' contains a sample test
+   program to verify correctness of your implementation.
+
+   Run this test program program as 
+   testcase <number-of-children>
+   Eg. : $testcase 10
+
+4. The directory 'sample-input' contains different 
+   priority order for child processes. Run different test case
+   using the given test program by changing the priority of child
+   processes.
+
+5. The directory 'sample-output' contains sample outputs for
+   both task2 and task3. In both the sample outputs, the priority
+   order of child processes is in increasing order.
